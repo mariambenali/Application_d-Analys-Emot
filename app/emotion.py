@@ -1,11 +1,7 @@
 import os
 import requests
-from dotenv import load_dotenv
+from app.config import HF_TOKEN
 
-
-load_dotenv()
-HF_TOKEN=os.getenv("HF_TOKEN")
-print(HF_TOKEN)
 
 def predict_emotion(text):
     
@@ -22,3 +18,4 @@ def predict_emotion(text):
         "inputs": text,
     })
     return output
+
