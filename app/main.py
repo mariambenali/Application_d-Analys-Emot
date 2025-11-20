@@ -49,6 +49,6 @@ def get_emotion(text:str):
         var= "neutre"
     else:
         var = "positif"
-    
+    print("hhhh")
     return {"score":score, "var":var}
 
