@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-image: url('./a1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+body h1{
+    display: flex;
+    place-items: center;
+    background-color:rgba(3, 3, 12, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 50px;
+    height:50px;
+}
+.login{
+    background-color:rgba(3, 3, 12, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+.login h3{
+    margin-right: 270px;
+}
+
+.input-box input{
+    width:300px;
+    height:15px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    padding:10px;
+    border-radius: 7px;
+    
+    
+}
+
+.submit-button button{
+    background-color: rgb(6, 1, 22);
+    border-radius: 4px;
+    width:150px;
+    height:25px;
+    
+}
+
+
+
+
+
+
+
+
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

@@ -4,9 +4,18 @@ from pydantic import BaseModel
 from jose import jwt
 from app.emotion import predict_emotion
 from app.config import SECRET_KEY, ALGORITHM
+from fastapi.middleware.cors import CORSMiddleware
 
 app= FastAPI()
 payload={}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Users(BaseModel):
     username : str
@@ -22,7 +31,7 @@ def login(db:Users):
     if db.username==data["username"] and db.password==data["password"]:
         payload={"username":db.username}
         token= jwt.encode(payload,SECRET_KEY,algorithm=ALGORITHM)
-        return token
+        return {"token":token}
     else:
         return "not working!!!"
 
