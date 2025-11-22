@@ -21,6 +21,9 @@ class Users(BaseModel):
     username : str
     password : str
 
+class TextIn(BaseModel):
+    text: str
+
 data={
     "username" :"mariam",
     "password" :"mariam"
@@ -48,16 +51,19 @@ def get_token(token:str=Header()):
 
 
 @app.post("/predict")
-def get_emotion(text:str):
+def get_emotion(payload: TextIn):
+    text = payload.text
     pred=predict_emotion(text)
+
     label=pred[0][0]["label"]
     score=pred[0][0]["score"]
+
     if score >= 2:
         var= "negatif"
     elif score == 3:
         var= "neutre"
     else:
         var = "positif"
-    print("hhhh")
+    
     return {"score":score, "var":var}
 

@@ -18,3 +18,7 @@ python-jose[cryptography]
 passlib[bcrypt]
 # ==========================
 python-multipart
+# ==========================
+node.js
+# ==========================
+react-router-dom

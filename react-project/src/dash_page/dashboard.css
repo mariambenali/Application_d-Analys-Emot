@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    min-height: 100vh;
+    background-image: url('./01.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+/* card container */
+div.prediction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color:rgba(3, 3, 12, 0.8);
+  box-shadow: 0 12px 40px rgba(106, 110, 138, 0.55);
+  gap: 20px;
+  border-radius: 12px;
+}
+.prediction form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+input{
+  margin-top: 10%;
+  background-color:rgb(9, 9, 20);
+  padding: 60px;
+  border-radius: 10px;
+  border: none; 
+}
+
+button{
+  margin:30px;
+  padding:7px;
+  background-color:rgb(9, 9, 20);
+  padding-left: 70px ;
+  padding-right: 70px ;
+  border-radius: 7px;
+  border: none;
+  transition: transform 0.2s; 
+
+}
+button:hover{
+  background-color: rgb(20, 10, 60); /* change color on hover */
+  transform: scale(1.05); 
+}
+.bounce{
+  animation: pop 0.4s ease-out;
+}
+@keyframes pop{
+  0% { transform:scale(0.2); opacity:0;}
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}

@@ -1,10 +1,13 @@
-import { useState } from "react";   
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 
 function Login() {
 
     const[username,setUsername]=useState("");
     const[password,setPassword]=useState("");
+
+    const navigate = useNavigate();
 
     function handleUsernameChange(e){
         setUsername(e.target.value);
@@ -32,7 +35,8 @@ function Login() {
 
         if (data.token){
             localStorage.setItem("token",data.token);
-            alert("Login success!");
+
+            navigate("/predict");
         }else{
             alert("Invalid");
         }

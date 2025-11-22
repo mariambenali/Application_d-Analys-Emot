@@ -2,6 +2,7 @@ body {
     margin: 0;
     display: flex;
     place-items: center;
+    justify-content: center;
     min-width: 320px;
     min-height: 100vh;
     background-image: url('./a1.jpg');
@@ -12,13 +13,18 @@ body h1{
     display: flex;
     place-items: center;
     background-color:rgba(3, 3, 12, 0.8);
+    box-shadow: 0 12px 40px rgba(106, 110, 138, 0.55);
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 50px;
     height:50px;
 }
 .login{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     background-color:rgba(3, 3, 12, 0.8);
+    box-shadow: 0 12px 40px rgba(106, 110, 138, 0.55);
     padding: 30px;
     border-radius: 10px;
 }
@@ -36,12 +42,20 @@ body h1{
     
     
 }
+.submitbutton {
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+}
 
-.submit-button button{
+.submitbutton{
+    display: flex;
+    justify-content: center;
     background-color: rgb(6, 1, 22);
     border-radius: 4px;
     width:150px;
     height:25px;
+    cursor: pointer;
     
 }
 
@@ -51,13 +65,4 @@ body h1{
 
 
 
-
-.fade-in {
-    animation: fadeIn 1.2s ease forwards;
-    opacity: 0;
-  }
   
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
