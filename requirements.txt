@@ -22,3 +22,5 @@ python-multipart
 node.js
 # ==========================
 react-router-dom
+# ==========================
+pytest

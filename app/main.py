@@ -36,7 +36,7 @@ def login(db:Users):
         token= jwt.encode(payload,SECRET_KEY,algorithm=ALGORITHM)
         return {"token":token}
     else:
-        return "not working!!!"
+        return "not working"
 
     
 @app.get("/data")
@@ -58,12 +58,12 @@ def get_emotion(payload: TextIn):
     label=pred[0][0]["label"]
     score=pred[0][0]["score"]
 
-    if score >= 2:
-        var= "negatif"
-    elif score == 3:
-        var= "neutre"
-    else:
+    if score == 1:
         var = "positif"
+    elif score == 2:
+        var = "negatif"
+    else:
+        var = "neutre"
     
     return {"score":score, "var":var}
 
